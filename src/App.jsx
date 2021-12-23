@@ -1,10 +1,9 @@
 import {hot} from 'react-hot-loader/root';
 
-import React from 'react';
-import './App.css';
+import Box1 from './containers/Box1/Box1';
 
 export default hot(() => {
     return <div className="App">
-        <h1> Hello, World! </h1>
+        <Box1/>
     </div>;
 });
