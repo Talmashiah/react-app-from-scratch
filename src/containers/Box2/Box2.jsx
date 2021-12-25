@@ -1,17 +1,14 @@
-import {motion} from 'framer-motion/dist/framer-motion'
+import BoxWrapper from '../../components/BoxWrapper/BoxWrapper';
+import Box from '../../components/Box/Box';
 
-import styled from 'styled-components';
-import * as styles from './styles';
-
-export default styled(({className}) => {
-    return <div {...{className}}>
-        <motion.div {...{
-            className: 'box',
+export default ({className}) => {
+    return <BoxWrapper {...{className}}>
+        <Box {...{
             whileHover: {
                 scale: 1.1
             },
             whileTap: {
-                scale: 0.1
+                scale: 0.9
             },
             drag: true,
             dragConstraints: {
@@ -21,5 +18,5 @@ export default styled(({className}) => {
                 top: -200
             }
         }}/>
-    </div>;
-})`${styles.Box2}`;
+    </BoxWrapper>;
+};

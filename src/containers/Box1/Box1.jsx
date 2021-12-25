@@ -1,15 +1,12 @@
-import {motion} from 'framer-motion/dist/framer-motion'
-
-import styled from 'styled-components';
-import * as styles from './styles';
 import {useState} from 'react';
+import BoxWrapper from '../../components/BoxWrapper/BoxWrapper';
+import Box from '../../components/Box/Box';
 
-export default styled(({className}) => {
+export default ({className}) => {
     const [isAnimating, setIsAnimating] = useState(false);
 
-    return <div {...{className}}>
-        <motion.div {...{
-            className: 'box',
+    return <BoxWrapper {...{className}}>
+        <Box {...{
             onClick: () => setIsAnimating(prev => !prev),
             initial: {
                 backgroundColor: 'green',
@@ -31,5 +28,5 @@ export default styled(({className}) => {
                 mass: 0.9
             }
         }}/>
-    </div>;
-})`${styles.Box1}`;
+    </BoxWrapper>;
+};
